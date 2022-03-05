@@ -31,12 +31,13 @@ def insert():
     except:
         substitutions = {}
     
-    if not replaceable in substitutions: # checking for existing of replaceable symbol array
+    if not (replaceable in substitutions): # checking for existing of replaceable symbol array
         substitutions[replaceable] = [replacing]
         print("Thx! {0} -> {1} added.".format(replaceable, replacing))
     else:
         if not replacing in substitutions[replaceable]: # checking for replacing symbol in replaceable array
-            substitutions[replaceable] = substitutions[replaceable].add(replacing)
+            substitutions[replaceable].append(replacing)
+            print(substitutions[replaceable])
             print("Thx! {0} -> {1} added.".format(replaceable, replacing))
         else:
             print("Awersome! But this substitution is almost there)")
