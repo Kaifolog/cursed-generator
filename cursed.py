@@ -3,7 +3,7 @@ import sys
 import random
 
 JSON_PATH = "cursed_dict.json"
-p = 0.2 # symbol change probability coefficient
+p = 1 # symbol change probability coefficient
 
 if p>1:
     print("err : p > 1")
@@ -15,7 +15,7 @@ def insert():
     if len(replaceable)>1:
         print("err: replaceable symbol length > 1")
         return
-    replaceable = replaceable.lower()
+    # replaceable = replaceable.lower()
     
     print("Please enter replacing symbol:")
     replacing = str(input())
@@ -33,9 +33,11 @@ def insert():
     
     if not replaceable in substitutions: # checking for existing of replaceable symbol array
         substitutions[replaceable] = [replacing]
+        print("Thx! {0} -> {1} added.".format(replaceable, replacing))
     else:
         if not replacing in substitutions[replaceable]: # checking for replacing symbol in replaceable array
             substitutions[replaceable] = substitutions[replaceable].add(replacing)
+            print("Thx! {0} -> {1} added.".format(replaceable, replacing))
         else:
             print("Awersome! But this substitution is almost there)")
 
@@ -46,7 +48,7 @@ def insert():
 
 def generate():
     print("Enter the phrase:")
-    raw_string = str(input()).lower()
+    raw_string = str(input()) # .lower()
     revised = ""
     def replace_indicator():
         return random.choices([True, False], weights = [p , 1-p])[0]
