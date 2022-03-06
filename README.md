@@ -1,14 +1,14 @@
-# <h1 align="center">CuR$∃d TεXt Gεn∃r∀t0R</h1>
+# <h1 align="center">Cur$∃d Tεxt Gεn∃r∀t0r</h1>
 
 <p align="center">
 
-# Motivation
-Cursed generator is designed for creating cursed text based on substitutions in his own dictionary and to edit it.
+# Mot1vation
+Cursed gεnerator is dε$i9nεd f0r crεating cursed tε×t based on suьst1tutions iu his oшn d1ct1onary and t0 edit 1t.
 
 # Launch
-The only thing you have to do is to make sure that your python version is 3.6+
+Thε only thiu9 y0u ha∀e to do is t0 make $urε that your pyth0n vεrs1ou is 3.6+
 
-Then you can deploy pipenv or just launch script.
+Then y0n cau deploy pipenv 0r jnst launch script.
 
 ```
 python3 cursed.py
