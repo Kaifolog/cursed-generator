@@ -3,10 +3,10 @@ import sys
 import random
 
 JSON_PATH = "cursed_dict.json"
-p = 1 # symbol change probability coefficient
+CURSED_LVL = 1.0 # symbol change probability coefficient
 
-if p>1:
-    print("err : p > 1")
+if CURSED_LVL > 1:
+    print("err : CURSED_LVL > 1")
     sys.exit(1)
 
 def insert():
@@ -26,7 +26,7 @@ def insert():
     print("Checking for pair {0} -> {1}".format(replaceable, replacing))
     
     try:
-        with open(JSON_PATH, "r") as read_file:
+        with open(JSON_PATH, "r+") as read_file:
             substitutions = json.load(read_file)
     except:
         substitutions = {}
@@ -40,19 +40,17 @@ def insert():
             print(substitutions[replaceable])
             print("Thx! {0} -> {1} added.".format(replaceable, replacing))
         else:
-            print("Awersome! But this substitution is almost there)")
+            print("Awersome! But this substitution is almost there ;)")
 
     with open(JSON_PATH, "w+") as write_file:
         json.dump(substitutions, write_file)
-
-
 
 def generate():
     print("Enter the phrase:")
     raw_string = str(input()) # .lower()
     revised = ""
     def replace_indicator():
-        return random.choices([True, False], weights = [p , 1-p])[0]
+        return random.choices([True, False], weights = [CURSED_LVL , 1-CURSED_LVL])[0]
         
     try:
         with open(JSON_PATH, "r") as read_file:
@@ -64,16 +62,30 @@ def generate():
                     revised = revised + symbol
         print(revised)
     except FileNotFoundError:
-        print("Sory! Unfortunately {0} is unavailable ;(".format(JSON_PATH))
+        print("Sorry! Unfortunately {0} is unavailable ;(".format(JSON_PATH))
+
+def change_level():
+    print("Enter the necessary cursed level:")
+    global CURSED_LVL
+    try:
+        cursed_lvl = float(input())
+        if cursed_lvl < 0 or cursed_lvl > 1:
+            throw
+        CURSED_LVL = cursed_lvl
+    except:
+        print("Oops! There are some problems with input...")
 
 if __name__ == "__main__":
-    print("(1) to insert new substitution\n(2) to generate cursed phrase\n(q) to quit\n")
+    print("(1) to input new substitution\n(2) to generate cursed phrase\n(3) to change the level of the curse [0,1]\n(q) to quit\n")
     while True:
-        print("Select menu option: (1) (2) (q)")
+        print("Select menu option: (1) (2) (3) (q)")
+        print("Now level of the curse is", CURSED_LVL)
         scenario = str(input())
         if scenario == "1":
             insert()
         elif scenario == "2":
             generate()
-        elif scenario == "q":
+        elif scenario == "3":
+            change_level()
+        elif scenario == "q" or scenario == "й":
             break
