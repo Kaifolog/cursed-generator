@@ -8,7 +8,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 5%;
+        margin-top: 100px;
         zoom: 70%;
 }
 
@@ -25,10 +25,9 @@ body {
 .forcontainer {
         background: #1e181e;
         position: relative;
-        margin: 200px auto;
-        padding: 50px 0px;
-        width: 959px;
-
+        margin: 140px auto;
+        padding: 35px 0px 0px;
+        width: 707px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -39,10 +38,10 @@ body {
         content: '';
         width: 0;
         height: 0;
-        border-bottom: 50px solid #1e181e;
-        border-right: 959px solid transparent;
+        border-bottom: 35px solid #1e181e;
+        border-right: 707px solid transparent;
         position: absolute;
-        top: -50px;
+        top: -35px;
         left: 0px;
 }
 
@@ -50,15 +49,15 @@ body {
         content: '';
         width: 0;
         height: 0;
-        border-top: 50px solid #1e181e;
-        border-left: 959px solid transparent;
+        border-top: 35px solid #1e181e;
+        border-left: 707px solid transparent;
         position: absolute;
-        bottom: -50px;
+        bottom: -35px;
         left: 0px;
 }
 
 .second-text {
-        margin: 50px 50px;
+        margin: 40px 40px;
 }
 
 textarea {
@@ -70,9 +69,13 @@ textarea {
         height: 200px;
         width: 859px;
         padding: 3px 10px;
-        margin: 0px 50px;
+        margin: 0px 35px;
         font-size: 30px;
-        padding: 10px
+        padding: 10px;
+        max-width: 90%;
+        min-width: 90%;
+        max-height: 200px;
+        min-height: 200px;
 }
 
 .form-footer {}
@@ -100,7 +103,7 @@ textarea {
 
 .center-center {
         position: relative;
-        left: 70%;
+        left: 65%;
         top: -45%;
 }
 

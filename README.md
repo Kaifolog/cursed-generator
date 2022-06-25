@@ -37,3 +37,8 @@ CuR$∃d TεXt Gεn∃r∀t0R
 Select menu option: (1) (2) (3) (q)
 Now level of the curse is 0.9
 ```
+
+# Web
+You also can try it in web:
+
+https://kaifolog.github.io/cursed-generator/
