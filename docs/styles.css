@@ -8,6 +8,8 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 5%;
+        zoom: 70%;
 }
 
 .title {
