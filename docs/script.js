@@ -18,12 +18,14 @@ button.onclick = function () {
 
         function replace_indicator() { return (Math.floor(Math.random() * 10) < CURSED_LVL); };
 
+        function isascii(character) { return /^[\x00-\x7F]*$/.test(character); }
+
         for (var symbol of raw_string) {
 
                 if (symbol in substitutions && replace_indicator())
                         if (cb1.checked) {
                                 let substitution_char = substitutions[symbol][Math.floor(Math.random() * (substitutions[symbol]).length)]
-                                if (substitution_char.charCodeAt(0) < 228 && substitution_char.charCodeAt(0) > 256) {
+                                if (isascii(substitution_char)) {
                                         revised += substitution_char;
                                 }
                                 else {
