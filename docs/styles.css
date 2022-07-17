@@ -2,14 +2,14 @@
 
 body {
         min-height: 100vh;
-        display: grid;
         place-content: center;
         background-color: #fefe33;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin-top: 100px;
-        zoom: 70%;
+        zoom: 50%;
 }
 
 .title {
@@ -19,14 +19,15 @@ body {
         font-family: "Orbitron";
         font-weight: 900;
         letter-spacing: -1px;
-        text-align: center
+        text-align: center;
+        margin-bottom: 100px;
 }
+
 
 .forcontainer {
         background: #1e181e;
-        position: relative;
-        margin: 140px auto;
-        padding: 35px 0px 0px;
+        padding-top: 35px;
+        padding-bottom: 35px;
         width: 707px;
         display: flex;
         flex-direction: column;
@@ -34,26 +35,18 @@ body {
 }
 
 
-.forcontainer:before {
-        content: '';
+.top-triangle {
         width: 0;
         height: 0;
         border-bottom: 35px solid #1e181e;
         border-right: 707px solid transparent;
-        position: absolute;
-        top: -35px;
-        left: 0px;
 }
 
-.forcontainer:after {
-        content: '';
+.bottom-triangle {
         width: 0;
         height: 0;
         border-top: 35px solid #1e181e;
         border-left: 707px solid transparent;
-        position: absolute;
-        bottom: -35px;
-        left: 0px;
 }
 
 .second-text {

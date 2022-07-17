@@ -1,16 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.41] - ```Unreleased```
-### Added
-- Site.
-
-### Changed
-- Expand list of substitutions.
-
-## [1.4] - ```Unreleased```
+## [1.4] - 17-07-2022
 ### Added
 - CaMeL CaSe generation.
+- Site.
+- Adding substitutions by sequences.
 
 ### Changed
 - Expand list of substitutions.
